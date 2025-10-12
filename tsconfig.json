@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"module": "esnext",
+		"target": "es6",
+		"lib": ["dom", "es2015"],
+		"sourceMap": true,
+		"declaration": false,
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true
+	}
+}
