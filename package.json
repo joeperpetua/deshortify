@@ -7,9 +7,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
     "build": "node build.js"
   },
   "devDependencies": {
-    "esbuild": "^0.25.10"
+    "@types/chrome": "^0.1.24",
+    "esbuild": "^0.25.10",
+    "prettier": "^3.6.2"
   }
 }
