@@ -1,7 +1,7 @@
 require('esbuild').build({
-  entryPoints: ['src/content.ts'],
+  entryPoints: ['src/content.ts', 'src/background.ts'],
   bundle: true,
-  outfile: 'dist/content.js',
+  outdir: 'dist',
   minify: true,
   sourcemap: false,
   platform: 'browser',

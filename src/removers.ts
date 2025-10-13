@@ -1,6 +1,10 @@
 import { selectors } from "./constants";
+import { getSetting } from "./utils";
 
-export const removeShortsFromSidebar = () => {
+export const removeShortsFromSidebar = async () => {
+	const { removeSidebar } = await getSetting("removeSidebar");
+	if (!removeSidebar) return;
+
 	const shortsSidebarItem = document.querySelector<HTMLAnchorElement>(
 		selectors.sidebar
 	);
@@ -11,7 +15,10 @@ export const removeShortsFromSidebar = () => {
 	}
 };
 
-export const removeShortsFromChannelTab = () => {
+export const removeShortsFromChannelTab = async () => {
+	const { removeChannels } = await getSetting("removeChannels");
+	if (!removeChannels) return;
+
 	const shortsTab = document.querySelector(selectors.channelTab);
 
 	if (shortsTab) {
@@ -20,7 +27,11 @@ export const removeShortsFromChannelTab = () => {
 	}
 };
 
-export const removeShortsFromFeed = () => {
+export const removeShortsFromFeed = async () => {
+	const { removeFeed } = await getSetting("removeFeed");
+	if (!removeFeed) return false;
+  let removed = false; 
+
 	const shortsDrawer = document.querySelectorAll<HTMLDivElement>(
 		selectors.feed
 	);
@@ -28,6 +39,9 @@ export const removeShortsFromFeed = () => {
 		shortsDrawer.forEach((node) => {
 			console.log("[De-Shortify] Removing shorts from feed...");
 			node.remove();
+      removed = true;
 		});
 	}
+
+  return removed;
 };

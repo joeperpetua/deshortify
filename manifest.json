@@ -3,7 +3,7 @@
 	"name": "Youtube De-Shortify",
 	"version": "1.0",
 	"description": "A simple extension that removes shorts from Youtube.",
-	"permissions": [],
+	"permissions": ["storage"],
 	"host_permissions": ["https://www.youtube.com/*"],
 	"icons": {
 		"16": "assets/icons/icon16.png",
@@ -18,6 +18,9 @@
 			"run_at": "document_idle"
 		}
 	],
+	"background": {
+		"service_worker": "dist/background.js"
+	},
 	"action": {
 		"default_popup": "ui/popup.html",
 		"default_title": "Open settings",
