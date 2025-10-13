@@ -2,13 +2,25 @@ body {
 	font-family: "Roboto", Arial, sans-serif;
 	background-color: #282828;
 	color: #fff;
-	margin: 16px;
 	width: 240px;
+	margin: 16px;
+	padding-bottom: 1rem;
+}
+
+.title-container {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.title-container img {
+	height: 3rem;
 }
 
 h1 {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 16px;
 }
 
@@ -19,6 +31,7 @@ h1 {
 	cursor: pointer;
 	user-select: none;
 	font-size: 14px;
+	font-weight: 550;
 	color: #fff;
 }
 
@@ -30,7 +43,7 @@ h1 {
 	position: relative;
 	width: 40px;
 	height: 20px;
-	background-color: #ddd;
+	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 20px;
 	transition: background-color 0.3s;
 	margin-right: 12px;
@@ -40,24 +53,27 @@ h1 {
 .switch::before {
 	content: "";
 	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: 16px;
-	height: 16px;
+	top: 3px;
+	left: 3px;
+	width: 14px;
+	height: 14px;
 	background-color: white;
 	border-radius: 50%;
-	transition: transform 0.3s;
+	transition: transform 0.3s, width 0.3s, height 0.3s;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .switch-container input[type="checkbox"]:checked + .switch {
-	background-color: #ff0000; /* YouTube red */
+	background-color: #ff0033;
 }
 
 .switch-container input[type="checkbox"]:checked + .switch::before {
 	transform: translateX(20px);
+	top: 1px;
+	width: 16px;
+	height: 16px;
 }
 
 .switch-container:hover .switch {
-	background-color: #bbb;
+	background-color: rgba(255, 255, 255, 0.2);
 }
