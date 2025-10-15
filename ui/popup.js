@@ -21,12 +21,19 @@ const initListeners = () => {
 
 window.onload = () => {
   chrome.storage.local.get(
-    ["removeSidebar", "removeChannels", "removeFeed", "removeSuggestions", "redirect"],
+    [
+      "removeSidebar",
+      "removeChannels",
+      "removeFeed",
+      "removeSuggestions",
+      "redirect",
+    ],
     (result) => {
       document.getElementById("removeSidebar").checked = result.removeSidebar;
       document.getElementById("removeChannels").checked = result.removeChannels;
       document.getElementById("removeFeed").checked = result.removeFeed;
-      document.getElementById("removeSuggestions").checked = result.removeSuggestions;
+      document.getElementById("removeSuggestions").checked =
+        result.removeSuggestions;
       document.getElementById("redirect").checked = result.redirect;
       console.log("[De-Shortify] Loaded settings", result);
     },
