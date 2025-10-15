@@ -2,6 +2,7 @@ import {
   removeShortsFromChannelTab,
   removeShortsFromFeed,
   removeShortsFromSidebar,
+  removeShortsFromSuggestions,
 } from "./removers";
 import { redirectOnShorts } from "./utils";
 
@@ -11,6 +12,7 @@ const observer = new MutationObserver(async () => {
   redirectOnShorts();
   removeShortsFromSidebar();
   removeShortsFromChannelTab();
+  removeShortsFromSuggestions();
 
   // Only remove shorts drawer on mutation during the page load,
   // after this is done we can rely on scroll only

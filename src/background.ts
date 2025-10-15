@@ -2,6 +2,7 @@ const defaults = {
   removeSidebar: true,
   removeChannels: true,
   removeFeed: true,
+  removeSuggestions: true,
   redirect: true,
 };
 

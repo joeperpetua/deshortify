@@ -45,3 +45,18 @@ export const removeShortsFromFeed = async () => {
 
   return removed;
 };
+
+export const removeShortsFromSuggestions = async () => {
+  const { removeSuggestions } = await getSetting("removeSuggestions");
+  if (!removeSuggestions) return;
+
+  const shortsDrawer = document.querySelectorAll<HTMLDivElement>(
+    selectors.suggestions,
+  );
+  if (shortsDrawer) {
+    shortsDrawer.forEach((node) => {
+      console.log("[De-Shortify] Removing shorts from suggestions...");
+      node.remove();
+    });
+  }
+};
