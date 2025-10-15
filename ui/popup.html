@@ -1,57 +1,76 @@
 <!doctype html>
 <html>
-  <head>
-    <title>De-Shortify Settings</title>
-    <link rel="stylesheet" href="popup.css" />
-  </head>
-  <body>
-    <div class="title-container">
-      <img src="../assets/youtube_shorts.svg" />
-      <h1>De-Shortify</h1>
-    </div>
+	<head>
+		<title>De-Shortify Settings</title>
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<div class="title-container">
+			<img src="../assets/youtube_shorts.svg" />
+			<h1>De-Shortify</h1>
+		</div>
 
-    <div class="switch-group">
-      <div class="switch-container">
-        <label class="switch" for="removeSidebar">
-          <input type="checkbox" id="removeSidebar" />
-          <span class="slider"></span>
-        </label>
-        Remove shorts from sidebar
-      </div>
+		<div class="switch-group">
+			<div class="switch-container">
+				<label class="switch" for="removeSidebar">
+					<input type="checkbox" id="removeSidebar" />
+					<span class="slider"></span>
+				</label>
+				Remove shorts from sidebar
+			</div>
 
-      <div class="switch-container">
-        <label class="switch" for="removeChannels">
-          <input type="checkbox" id="removeChannels" />
-          <span class="slider"></span>
-        </label>
-        Remove shorts from channels
-      </div>
+			<div class="switch-container">
+				<label class="switch" for="removeChannels">
+					<input type="checkbox" id="removeChannels" />
+					<span class="slider"></span>
+				</label>
+				Remove shorts from channels
+			</div>
 
-      <div class="switch-container">
-        <label class="switch" for="removeFeed">
-          <input type="checkbox" id="removeFeed" />
-          <span class="slider"></span>
-        </label>
-        Remove shorts from feed
-      </div>
+			<div class="switch-container">
+				<label class="switch" for="removeFeed">
+					<input type="checkbox" id="removeFeed" />
+					<span class="slider"></span>
+				</label>
+				Remove shorts from feed
+			</div>
 
-      <div class="switch-container">
-        <label class="switch" for="removeSuggestions">
-          <input type="checkbox" id="removeSuggestions" />
-          <span class="slider"></span>
-        </label>
-        Remove shorts from suggestions
-      </div>
+			<div class="switch-container">
+				<label class="switch" for="removeSuggestions">
+					<input type="checkbox" id="removeSuggestions" />
+					<span class="slider"></span>
+				</label>
+				Remove shorts from suggestions
+			</div>
 
-      <div class="switch-container">
-        <label class="switch" for="redirect">
-          <input type="checkbox" id="redirect" />
-          <span class="slider"></span>
-        </label>
-        Redirect out of shorts
-      </div>
-    </div>
+			<div class="switch-container">
+				<label class="switch" for="redirect">
+					<input type="checkbox" id="redirect" />
+					<span class="slider"></span>
+				</label>
+				Redirect out of shorts
+			</div>
+		</div>
 
-    <script src="popup.js"></script>
-  </body>
+		<div class="button-container">
+			<a
+				target="_blank"
+				referrerpolicy="no-referrer"
+				href="https://github.com/joeperpetua/deshortify/issues/new"
+        title="Report issue"
+			>
+				<img src="../assets/github.svg" />
+			</a>
+      <a
+				target="_blank"
+				referrerpolicy="no-referrer"
+				href="#"
+        title="Give feedback"
+			>
+				<img src="../assets/feedback.svg" />
+			</a>
+		</div>
+
+		<script src="popup.js"></script>
+	</body>
 </html>
