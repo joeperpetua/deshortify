@@ -1,4 +1,4 @@
-import { selectors } from "./constants";
+import { Messages, selectors } from "./constants";
 import { getSetting } from "./utils";
 
 export const removeShortsFromSidebar = async () => {
@@ -12,6 +12,7 @@ export const removeShortsFromSidebar = async () => {
 	if (shortsSidebarItem) {
 		console.log("[De-Shortify] Removing shorts from sidebar...");
 		shortsSidebarItem.remove();
+		chrome.runtime.sendMessage(Messages.INCREMENT_BLOCKED);
 	}
 };
 
@@ -24,6 +25,7 @@ export const removeShortsFromChannelTab = async () => {
 	if (shortsTab) {
 		console.log("[De-Shortify] Removing shorts from channel tab...");
 		shortsTab.remove();
+		chrome.runtime.sendMessage(Messages.INCREMENT_BLOCKED);
 	}
 };
 
@@ -39,6 +41,7 @@ export const removeShortsFromFeed = async () => {
 		shortsDrawer.forEach((node) => {
 			console.log("[De-Shortify] Removing shorts from feed...");
 			node.remove();
+			chrome.runtime.sendMessage(Messages.INCREMENT_BLOCKED);
 		});
 	}
 };
