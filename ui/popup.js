@@ -4,6 +4,8 @@ const saveSettings = () => {
     removeChannels: document.getElementById("removeChannels").checked,
     removeFeed: document.getElementById("removeFeed").checked,
     removeSuggestions: document.getElementById("removeSuggestions").checked,
+    removeFromSearchResults: document.getElementById("removeFromSearchResults").checked,
+    removeVideoLikeShorts: document.getElementById("removeVideoLikeShorts").checked,
     redirect: document.getElementById("redirect").checked,
   };
 
@@ -26,6 +28,8 @@ window.onload = () => {
       "removeChannels",
       "removeFeed",
       "removeSuggestions",
+      "removeFromSearchResults",
+      "removeVideoLikeShorts",
       "redirect",
     ],
     (result) => {
@@ -34,6 +38,10 @@ window.onload = () => {
       document.getElementById("removeFeed").checked = result.removeFeed;
       document.getElementById("removeSuggestions").checked =
         result.removeSuggestions;
+      document.getElementById("removeFromSearchResults").checked =
+        result.removeFromSearchResults;
+      document.getElementById("removeVideoLikeShorts").checked =
+        result.removeVideoLikeShorts;
       document.getElementById("redirect").checked = result.redirect;
       console.log("[De-Shortify] Loaded settings", result);
     },

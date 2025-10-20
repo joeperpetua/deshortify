@@ -1,10 +1,15 @@
 import {
-  removeShortsFromChannelTab,
-  removeShortsFromFeed,
-  removeShortsFromSidebar,
-  removeShortsFromSuggestions,
+  removeChipFilter,
+  removeFromSearchResults,
+	removeShortsFromChannelTab,
+	removeShortsFromFeed,
+	removeShortsFromSidebar,
+	removeShortsFromSuggestions,
+  removeShortVideos,
 } from "./removers";
 import { redirectOnShorts } from "./utils";
+
+chrome.storage.local.set({ runTimeBlocked: 0 });
 
 const observer = new MutationObserver(async () => {
   redirectOnShorts();
@@ -12,6 +17,9 @@ const observer = new MutationObserver(async () => {
   removeShortsFromChannelTab();
   removeShortsFromSuggestions();
   removeShortsFromFeed();
+  removeFromSearchResults();
+  removeChipFilter();
+  removeShortVideos();
 });
 
 observer.observe(document.body, {
