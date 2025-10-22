@@ -2,9 +2,8 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: #282828;
   color: #fff;
-  width: 320px;
+  width: 360px;
   margin: 16px;
-  padding-bottom: 1rem;
 }
 
 .title-container {
@@ -35,6 +34,19 @@ h1 {
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
+  font-weight: 600;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-container img {
+  height: 2rem;
 }
 
 /* The switch - the box around the slider */
