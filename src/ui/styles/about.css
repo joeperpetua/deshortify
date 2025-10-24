@@ -1,0 +1,22 @@
+#about p {
+	font-size: large;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.button-container a {
+	text-decoration: none;
+	color: rgb(241, 241, 241);
+	width: 10rem;
+}
+
+.button-container img {
+	height: 2rem;
+}
