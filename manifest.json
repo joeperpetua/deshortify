@@ -22,7 +22,7 @@
     "service_worker": "dist/background.js"
   },
   "action": {
-    "default_popup": "ui/popup.html",
+    "default_popup": "src/ui/popup.html",
     "default_title": "Open settings",
     "default_icon": {
       "16": "assets/icons/icon16.png",
