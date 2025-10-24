@@ -9,6 +9,8 @@ const defaults = {
   removeFromSearchResults: true,
   removeVideoLikeShorts: true,
   redirect: true,
+  runTimeBlocked: 0,
+  allTimeBlocked: 0,
 };
 
 chrome.runtime.onInstalled.addListener(() => {
