@@ -1,11 +1,12 @@
 require("esbuild")
   .build({
-    entryPoints: ["src/content.ts", "src/background.ts"],
+    entryPoints: ["src/content.ts", "src/background.ts", "src/ui/popup.ts",],
     bundle: true,
     outdir: "dist",
     minify: true,
     sourcemap: false,
     platform: "browser",
     format: "iife",
+    target: ["chrome110"],
   })
   .catch(() => process.exit(1));
